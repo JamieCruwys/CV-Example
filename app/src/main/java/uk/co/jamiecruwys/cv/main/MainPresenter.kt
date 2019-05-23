@@ -19,7 +19,7 @@ class MainPresenter(val view: MainView?) {
 
     fun onResume() {
         view?.showLoading()
-        apiService.getProfileJson().enqueue(object: Callback<Profile> {
+        apiService.getProfileJson().enqueue(object : Callback<Profile> {
             override fun onResponse(call: Call<Profile>, response: Response<Profile>) {
                 view?.hideLoading()
                 val dto = response.body()
@@ -36,6 +36,5 @@ class MainPresenter(val view: MainView?) {
     }
 
     fun onDestroy() {
-
     }
 }

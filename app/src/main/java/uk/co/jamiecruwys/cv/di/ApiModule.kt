@@ -47,5 +47,4 @@ class ApiModule(private val baseUrl: String) {
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
-
 }
