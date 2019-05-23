@@ -11,4 +11,15 @@ data class Profile(
     val education: List<Course>,
     val awards: List<Award>,
     val experience: List<Experience>
-)
+) {
+    override fun toString(): String = "Name: $name\n" +
+            "Position: $position\n" +
+            "Phone: $phone\n" +
+            "Email: $email\n" +
+            "Summary: $summary\n" +
+            "Community: $community\n" +
+            "Personal Projects: $personalProjects\n" +
+            "Education: $education\n" +
+            "Awards: $awards\n" +
+            "Experience: $experience"
+}

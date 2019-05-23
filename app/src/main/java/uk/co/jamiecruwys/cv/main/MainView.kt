@@ -8,7 +8,7 @@ interface MainView {
 
     fun hideLoading()
 
-    fun showContent(content: Profile)
+    fun showContent(profile: Profile)
 
     fun showError()
 }
