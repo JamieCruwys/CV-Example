@@ -1,7 +1,13 @@
-package uk.co.jamiecruwys.cv
+package uk.co.jamiecruwys.cv.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import uk.co.jamiecruwys.cv.App
+import uk.co.jamiecruwys.cv.R
+import uk.co.jamiecruwys.cv.api.ApiService
+import uk.co.jamiecruwys.cv.api.CVDto
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), MainView {
 
@@ -10,6 +16,7 @@ class MainActivity : AppCompatActivity(), MainView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        App.appComponent.inject(this)
         presenter = MainPresenter(this)
     }
 
@@ -24,18 +31,18 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun showLoading() {
-        TODO("not implemented")
+        Log.d("Test", "Show loading")
     }
 
     override fun hideLoading() {
-        TODO("not implemented")
+        Log.d("Test", "Hide loading")
     }
 
-    override fun showContent(content: MainContent) {
-        TODO("not implemented")
+    override fun showContent(content: CVDto) {
+        Log.d("Test", "Show content: %s$content")
     }
 
     override fun showError() {
-        TODO("not implemented")
+        Log.d("Test", "Show error")
     }
 }
