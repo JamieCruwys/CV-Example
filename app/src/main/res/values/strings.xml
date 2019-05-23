@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Curriculum Vitae</string>
+    <string name="progress_title">Loading...</string>
+    <string name="contact_details_title">Contact Details</string>
+    <string name="contact_details_phone_label">Phone:</string>
+    <string name="contact_details_email_label">Email:</string>
+    <string name="summary_title">Summary</string>
+    <string name="community_title">Community</string>
+    <string name="personal_projects_title">Personal Projects</string>
 </resources>
