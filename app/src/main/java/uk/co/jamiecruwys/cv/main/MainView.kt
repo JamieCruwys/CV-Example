@@ -1,6 +1,6 @@
 package uk.co.jamiecruwys.cv.main
 
-import uk.co.jamiecruwys.cv.api.CVDto
+import uk.co.jamiecruwys.cv.api.Profile
 
 interface MainView {
 
@@ -8,7 +8,7 @@ interface MainView {
 
     fun hideLoading()
 
-    fun showContent(content: CVDto)
+    fun showContent(content: Profile)
 
     fun showError()
 }

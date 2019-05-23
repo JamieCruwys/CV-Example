@@ -5,7 +5,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.api.ApiService
-import uk.co.jamiecruwys.cv.api.CVDto
+import uk.co.jamiecruwys.cv.api.Profile
 import javax.inject.Inject
 
 class MainPresenter(val view: MainView?) {
@@ -19,8 +19,8 @@ class MainPresenter(val view: MainView?) {
 
     fun onResume() {
         view?.showLoading()
-        apiService.getCVJson().enqueue(object: Callback<CVDto> {
-            override fun onResponse(call: Call<CVDto>, response: Response<CVDto>) {
+        apiService.getCVJson().enqueue(object: Callback<Profile> {
+            override fun onResponse(call: Call<Profile>, response: Response<Profile>) {
                 view?.hideLoading()
                 val dto = response.body()
                 dto?.let {
@@ -28,7 +28,7 @@ class MainPresenter(val view: MainView?) {
                 } ?: view?.showError()
             }
 
-            override fun onFailure(call: Call<CVDto>, t: Throwable) {
+            override fun onFailure(call: Call<Profile>, t: Throwable) {
                 view?.hideLoading()
                 view?.showError()
             }

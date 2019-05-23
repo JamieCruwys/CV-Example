@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
-import uk.co.jamiecruwys.cv.api.ApiService
-import uk.co.jamiecruwys.cv.api.CVDto
-import javax.inject.Inject
+import uk.co.jamiecruwys.cv.api.Profile
 
 class MainActivity : AppCompatActivity(), MainView {
 
@@ -38,7 +36,7 @@ class MainActivity : AppCompatActivity(), MainView {
         Log.d("Test", "Hide loading")
     }
 
-    override fun showContent(content: CVDto) {
+    override fun showContent(content: Profile) {
         Log.d("Test", "Show content: %s$content")
     }
 
