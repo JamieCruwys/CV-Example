@@ -189,35 +189,28 @@
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                    android:id="@+id/personal_projects_card"
+            <LinearLayout
+                    android:id="@+id/personal_projects_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp">
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:padding="8dp"
+                        android:text="@string/personal_projects_title"/>
+
+                <LinearLayout
+                        android:id="@+id/personal_projects_item_container"
                         android:orientation="vertical"
-                        android:padding="8dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"/>
 
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="24sp"
-                            android:text="@string/personal_projects_title"/>
-
-                    <TextView
-                            android:id="@+id/personal_projects_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            tools:text="Personal Projects"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        <TextView
+                android:id="@+id/project_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                tools:text="Project Title"/>
+
+        <TextView
+                android:id="@+id/project_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                tools:text="https://github.com/JamieCruwys/Gratitude"
+                android:autoLink="web"/>
+
+        <TextView
+                android:id="@+id/project_features"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Simple gratitude journal that reminds you to be grateful each day. Built in Kotlin. Features offline storage, backup and data migration. Tested using JUnit, Mockito &amp; Espresso." />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

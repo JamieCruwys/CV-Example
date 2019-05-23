@@ -2,7 +2,6 @@ package uk.co.jamiecruwys.cv.main
 
 import uk.co.jamiecruwys.cv.api.Course
 import uk.co.jamiecruwys.cv.api.Experience
-import uk.co.jamiecruwys.cv.api.Project
 
 interface MainView {
 
@@ -40,7 +39,7 @@ interface MainView {
 
     fun hideCommunity()
 
-    fun showPersonalProjects(personalProjects: List<Project>)
+    fun showPersonalProject(title: String?, link: String?, features: String?)
 
     fun hidePersonalProjects()
 

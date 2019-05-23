@@ -3,23 +3,26 @@ package uk.co.jamiecruwys.cv.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.include_personal_project.view.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
 import uk.co.jamiecruwys.cv.api.Course
 import uk.co.jamiecruwys.cv.api.Experience
-import uk.co.jamiecruwys.cv.api.Project
 
 class MainActivity : AppCompatActivity(), MainView {
 
     private lateinit var presenter: MainPresenter
+    private lateinit var inflater: LayoutInflater
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         App.appComponent.inject(this)
         presenter = MainPresenter(this)
+        inflater = LayoutInflater.from(this)
     }
 
     override fun onResume() {
@@ -104,12 +107,34 @@ class MainActivity : AppCompatActivity(), MainView {
         community_card.isVisible = false
     }
 
-    override fun showPersonalProjects(personalProjects: List<Project>) {
-        // TODO("not implemented")
+    override fun showPersonalProject(title: String?, link: String?, features: String?) {
+        personal_projects_container.isVisible = true
+        personal_projects_item_container.isVisible = true
+
+        val view = inflater.inflate(R.layout.include_personal_project, personal_projects_item_container, false)
+        view.project_title.text = title
+
+        if (!link.isNullOrBlank()) {
+            view.project_link.isVisible = true
+            view.project_link.text = link
+        } else {
+            view.project_link.isVisible = false
+        }
+
+        if (!features.isNullOrBlank()) {
+            view.project_features.isVisible = true
+            view.project_features.text = features
+        } else {
+            view.project_features.isVisible = false
+        }
+
+        personal_projects_item_container.addView(view)
     }
 
     override fun hidePersonalProjects() {
-        personal_projects_card.isVisible = false
+        personal_projects_item_container.removeAllViews()
+        personal_projects_container.isVisible = false
+        personal_projects_item_container.isVisible = false
     }
 
     override fun showEducation(education: List<Course>) {

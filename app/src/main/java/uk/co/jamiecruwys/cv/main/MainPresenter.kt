@@ -9,6 +9,7 @@ import uk.co.jamiecruwys.cv.api.Course
 import uk.co.jamiecruwys.cv.api.Experience
 import uk.co.jamiecruwys.cv.api.Profile
 import uk.co.jamiecruwys.cv.api.Project
+import java.lang.StringBuilder
 import javax.inject.Inject
 
 class MainPresenter(val view: MainView?) {
@@ -104,9 +105,23 @@ class MainPresenter(val view: MainView?) {
     }
 
     fun showPersonalProjects(personalProjects: List<Project?>?) {
-        val filteredProjects: List<Project> = personalProjects?.filterNotNull() ?: listOf()
+        val filteredProjects: List<Project> = personalProjects?.filterNotNull()?.filter { !it.name.isNullOrBlank() } ?: listOf()
         if (filteredProjects.isNotEmpty()) {
-            view?.showPersonalProjects(filteredProjects)
+            filteredProjects.forEach {
+                val filteredFeatures: List<String> = it.features?.filterNotNull()?.filter { feature -> !feature.isBlank() } ?: listOf()
+                val stringBuilder = StringBuilder()
+                val lastIndex = filteredFeatures.lastIndex
+
+                filteredFeatures.forEachIndexed { index, feature ->
+                    stringBuilder.append("\u2022 $feature")
+
+                    if (lastIndex != -1 && index < lastIndex) {
+                        stringBuilder.append("\n")
+                    }
+                }
+
+                view?.showPersonalProject(it.name, it.link, stringBuilder.toString())
+            }
         } else {
             view?.hidePersonalProjects()
         }
