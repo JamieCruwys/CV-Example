@@ -9,7 +9,6 @@ import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
 import uk.co.jamiecruwys.cv.api.Course
 import uk.co.jamiecruwys.cv.api.Experience
-import uk.co.jamiecruwys.cv.api.Profile
 import uk.co.jamiecruwys.cv.api.Project
 
 class MainActivity : AppCompatActivity(), MainView {

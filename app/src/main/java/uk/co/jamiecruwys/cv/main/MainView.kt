@@ -51,5 +51,4 @@ interface MainView {
     fun showExperience(experience: List<Experience>)
 
     fun hideExperience()
-
 }
