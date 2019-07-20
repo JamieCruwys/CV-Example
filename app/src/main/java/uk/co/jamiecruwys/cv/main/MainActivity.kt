@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.include_personal_project.view.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
 import uk.co.jamiecruwys.cv.api.Course
 import uk.co.jamiecruwys.cv.api.Experience
+import uk.co.jamiecruwys.cv.main.ui.main.SectionsPagerAdapter
 
 class MainActivity : AppCompatActivity(), MainView {
 
@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         App.appComponent.inject(this)
+
+        view_pager.adapter = SectionsPagerAdapter(this, supportFragmentManager)
+        tabs.setupWithViewPager(view_pager)
+
         presenter = MainPresenter(this)
         inflater = LayoutInflater.from(this)
     }
@@ -36,105 +40,105 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun showLoading() {
-        progress_container.isVisible = true
-        profile_container.isVisible = false
+//        progress_container.isVisible = true
+//        profile_container.isVisible = false
     }
 
     override fun hideLoading() {
-        progress_container.isVisible = false
-        profile_container.isVisible = true
+//        progress_container.isVisible = false
+//        profile_container.isVisible = true
     }
 
     override fun showName(name: String) {
-        header_name.isVisible = true
-        header_name.text = name
+//        header_name.isVisible = true
+//        header_name.text = name
     }
 
     override fun hideName() {
-        header_name.isVisible = false
+//        header_name.isVisible = false
     }
 
     override fun showPosition(position: String) {
-        header_position.isVisible = true
-        header_position.text = position
+//        header_position.isVisible = true
+//        header_position.text = position
     }
 
     override fun hidePosition() {
-        header_position.isVisible = false
+//        header_position.isVisible = false
     }
 
     override fun showContactInfoContainer() {
-        contact_info_card.isVisible = true
+//        contact_info_card.isVisible = true
     }
 
     override fun hideContactInfoContainer() {
-        contact_info_card.isVisible = false
+//        contact_info_card.isVisible = false
     }
 
     override fun showPhone(phone: String) {
-        contact_info_phone_container.isVisible = true
-        contact_info_phone.text = phone
+//        contact_info_phone_container.isVisible = true
+//        contact_info_phone.text = phone
     }
 
     override fun hidePhone() {
-        contact_info_phone_container.isVisible = false
+//        contact_info_phone_container.isVisible = false
     }
 
     override fun showEmail(email: String) {
-        contact_info_email_container.isVisible = true
-        contact_info_email.text = email
+//        contact_info_email_container.isVisible = true
+//        contact_info_email.text = email
     }
 
     override fun hideEmail() {
-        contact_info_email_container.isVisible = false
+//        contact_info_email_container.isVisible = false
     }
 
     override fun showSummary(summary: String) {
-        summary_card.isVisible = true
-        summary_text.text = summary
+//        summary_card.isVisible = true
+//        summary_text.text = summary
     }
 
     override fun hideSummary() {
-        summary_card.isVisible = false
+//        summary_card.isVisible = false
     }
 
     override fun showCommunity(community: String) {
-        community_card.isVisible = true
-        community_text.text = community
+//        community_card.isVisible = true
+//        community_text.text = community
     }
 
     override fun hideCommunity() {
-        community_card.isVisible = false
+//        community_card.isVisible = false
     }
 
     override fun showPersonalProject(title: String?, link: String?, features: String?) {
-        personal_projects_container.isVisible = true
-        personal_projects_item_container.isVisible = true
-
-        val view = inflater.inflate(R.layout.include_personal_project, personal_projects_item_container, false)
-        view.project_title.text = title
-
-        if (!link.isNullOrBlank()) {
-            view.project_link.isVisible = true
-            view.project_link.text = link
-        } else {
-            view.project_link.isVisible = false
-        }
-
-        if (!features.isNullOrBlank()) {
-            view.project_features.isVisible = true
-            view.project_features.text = features
-        } else {
-            view.project_features.isVisible = false
-        }
-
-        personal_projects_item_container.addView(view)
+//        personal_projects_container.isVisible = true
+//        personal_projects_item_container.isVisible = true
+//
+//        val view = inflater.inflate(R.layout.include_personal_project, personal_projects_item_container, false)
+//        view.project_title.text = title
+//
+//        if (!link.isNullOrBlank()) {
+//            view.project_link.isVisible = true
+//            view.project_link.text = link
+//        } else {
+//            view.project_link.isVisible = false
+//        }
+//
+//        if (!features.isNullOrBlank()) {
+//            view.project_features.isVisible = true
+//            view.project_features.text = features
+//        } else {
+//            view.project_features.isVisible = false
+//        }
+//
+//        personal_projects_item_container.addView(view)
     }
 
     override fun hidePersonalProjects() {
-        personal_projects_item_container.removeAllViews()
-        personal_projects_container.isVisible = false
-        personal_projects_item_container.isVisible = false
+//        personal_projects_item_container.removeAllViews()
+//        personal_projects_container.isVisible = false
+//        personal_projects_item_container.isVisible = false
     }
 
     override fun showEducation(education: List<Course>) {
