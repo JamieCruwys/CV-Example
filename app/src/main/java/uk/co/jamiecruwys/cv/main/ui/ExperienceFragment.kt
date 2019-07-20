@@ -39,42 +39,12 @@ class ExperienceFragment : Fragment(), ExperienceView {
         presenter.onResume()
     }
 
-    override fun showPersonalProject(title: String?, link: String?, features: String?) {
-//        personal_projects_container.isVisible = true
-//        personal_projects_item_container.isVisible = true
-//
-//        val view = inflater.inflate(R.layout.include_personal_project, personal_projects_item_container, false)
-//        view.project_title.text = title
-//
-//        if (!link.isNullOrBlank()) {
-//            view.project_link.isVisible = true
-//            view.project_link.text = link
-//        } else {
-//            view.project_link.isVisible = false
-//        }
-//
-//        if (!features.isNullOrBlank()) {
-//            view.project_features.isVisible = true
-//            view.project_features.text = features
-//        } else {
-//            view.project_features.isVisible = false
-//        }
-//
-//        personal_projects_item_container.addView(view)
-    }
-
-    override fun hidePersonalProjects() {
-//        personal_projects_item_container.removeAllViews()
-//        personal_projects_container.isVisible = false
-//        personal_projects_item_container.isVisible = false
-    }
-
     override fun showExperience(experience: List<Experience>) {
-        TODO("not implemented")
+        // TODO:
     }
 
     override fun hideExperience() {
-        TODO("not implemented")
+        // TODO:
     }
 
     override fun onDestroy() {
