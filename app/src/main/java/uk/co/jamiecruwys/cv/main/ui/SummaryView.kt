@@ -1,15 +1,8 @@
-package uk.co.jamiecruwys.cv.main
+package uk.co.jamiecruwys.cv.main.ui
 
 import uk.co.jamiecruwys.cv.api.Course
-import uk.co.jamiecruwys.cv.api.Experience
 
-interface MainView {
-
-    fun showLoading()
-
-    fun hideLoading()
-
-    fun showError()
+interface SummaryView {
 
     fun showName(name: String)
 
@@ -39,15 +32,8 @@ interface MainView {
 
     fun hideCommunity()
 
-    fun showPersonalProject(title: String?, link: String?, features: String?)
-
-    fun hidePersonalProjects()
-
     fun showEducation(education: List<Course>)
 
     fun hideEducation()
 
-    fun showExperience(experience: List<Experience>)
-
-    fun hideExperience()
 }

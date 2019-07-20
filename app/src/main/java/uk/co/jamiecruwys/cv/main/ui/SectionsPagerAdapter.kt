@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui.main
+package uk.co.jamiecruwys.cv.main.ui
 
 import android.content.Context
 import androidx.fragment.app.Fragment
