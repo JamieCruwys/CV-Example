@@ -9,6 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import uk.co.jamiecruwys.cv.api.ApiService
+import uk.co.jamiecruwys.cv.main.CVRepository
 import javax.inject.Singleton
 
 @Module
@@ -47,4 +48,8 @@ class ApiModule(private val baseUrl: String) {
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideCVRepository(): CVRepository = CVRepository()
 }
