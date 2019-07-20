@@ -35,5 +35,4 @@ interface SummaryView {
     fun showEducation(education: List<Course>)
 
     fun hideEducation()
-
 }

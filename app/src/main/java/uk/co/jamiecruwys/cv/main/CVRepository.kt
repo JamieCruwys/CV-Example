@@ -11,5 +11,4 @@ class CVRepository {
     }
 
     fun get(): Profile? = profile
-
 }

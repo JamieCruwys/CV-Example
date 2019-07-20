@@ -1,7 +1,6 @@
 package uk.co.jamiecruwys.cv.main.ui
 
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.api.Course
 import uk.co.jamiecruwys.cv.main.CVRepository
 import javax.inject.Inject
 
@@ -15,9 +14,7 @@ class ExperiencePresenter(val view: ExperienceView) {
     }
 
     fun onResume() {
-
     }
-
 
 //    fun showPersonalProjects(personalProjects: List<Project?>?) {
 //        val filteredProjects: List<Project> = personalProjects?.filterNotNull()?.filter { !it.name.isNullOrBlank() } ?: listOf()
@@ -61,7 +58,5 @@ class ExperiencePresenter(val view: ExperienceView) {
 //    }
 
     fun onDestroy() {
-
     }
-
 }

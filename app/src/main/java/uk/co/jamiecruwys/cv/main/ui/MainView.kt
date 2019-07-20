@@ -11,5 +11,4 @@ interface MainView {
     fun hideContent()
 
     fun showError()
-
 }

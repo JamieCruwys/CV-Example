@@ -11,5 +11,4 @@ interface ExperienceView {
     fun showExperience(experience: List<Experience>)
 
     fun hideExperience()
-
 }

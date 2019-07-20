@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.fragment_summary.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
 import uk.co.jamiecruwys.cv.api.Course
-import uk.co.jamiecruwys.cv.api.Experience
 
 class SummaryFragment : Fragment(), SummaryView {
 
@@ -31,16 +30,16 @@ class SummaryFragment : Fragment(), SummaryView {
         return inflater.inflate(R.layout.fragment_summary, container, false)
     }
 
-    override fun onResume() {
-        super.onResume()
-        presenter.onResume()
-    }
-
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
         if (isVisibleToUser && isVisible && isResumed) {
             presenter.onResume()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        presenter.onResume()
     }
 
     override fun showName(name: String) {

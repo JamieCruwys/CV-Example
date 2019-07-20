@@ -1,7 +1,6 @@
 package uk.co.jamiecruwys.cv.main.ui
 
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.api.Course
 import uk.co.jamiecruwys.cv.main.CVRepository
 import javax.inject.Inject
 
@@ -56,7 +55,5 @@ class SummaryPresenter(private val view: SummaryView) {
     }
 
     fun onDestroy() {
-
     }
-
 }

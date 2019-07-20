@@ -27,6 +27,18 @@ class ExperienceFragment : Fragment(), ExperienceView {
         return inflater.inflate(R.layout.fragment_experience, container, false)
     }
 
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        if (isVisibleToUser && isVisible && isResumed) {
+            presenter.onResume()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        presenter.onResume()
+    }
+
     override fun showPersonalProject(title: String?, link: String?, features: String?) {
 //        personal_projects_container.isVisible = true
 //        personal_projects_item_container.isVisible = true
@@ -63,6 +75,11 @@ class ExperienceFragment : Fragment(), ExperienceView {
 
     override fun hideExperience() {
         TODO("not implemented")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
     }
 
     companion object {
