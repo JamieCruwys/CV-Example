@@ -3,7 +3,6 @@ package uk.co.jamiecruwys.cv
 import android.app.Application
 import uk.co.jamiecruwys.cv.di.ApiModule
 import uk.co.jamiecruwys.cv.di.AppComponent
-import uk.co.jamiecruwys.cv.di.AppModule
 import uk.co.jamiecruwys.cv.di.DaggerAppComponent
 
 class App : Application() {
@@ -16,7 +15,6 @@ class App : Application() {
         super.onCreate()
 
         appComponent = DaggerAppComponent.builder()
-            .appModule(AppModule(this))
             .apiModule(ApiModule("https://gist.githubusercontent.com/JamieCruwys/"))
             .build()
 

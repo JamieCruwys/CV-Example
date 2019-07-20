@@ -7,7 +7,7 @@ import uk.co.jamiecruwys.cv.main.MainPresenter
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppModule::class, ApiModule::class])
+@Component(modules = [ApiModule::class])
 interface AppComponent {
 
     fun inject(app: App)

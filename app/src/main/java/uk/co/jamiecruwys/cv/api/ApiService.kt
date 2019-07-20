@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("ba94d38324063f2048afa00654dd9f06/raw/4a9e4b3051e08e2e60bb49a35b9b905e4c2cfb05/profile.json")
+    @GET("c1a062644f16e6419cb5e70a48ebf025/raw/cc76e208f2ffd385a4ff5853a8262e020a3d2653/profile.json")
     fun getProfileJson(): Call<Profile>
 }
