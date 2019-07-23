@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_summary.*
+import kotlinx.android.synthetic.main.item_education.view.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
 import uk.co.jamiecruwys.cv.model.Course
@@ -106,11 +107,22 @@ class SummaryFragment : Fragment(), SummaryView {
     }
 
     override fun showEducation(education: List<Course>) {
-        // TODO:
+        education_card.isVisible = true
+        education_items_container.removeAllViews()
+
+        val inflater = LayoutInflater.from(education_card.context)
+        for (item in education) {
+            val view = inflater.inflate(R.layout.item_education, education_items_container, false)
+            view.name.text = item.name
+            view.grade.text = item.grade
+            view.location.text = item.location
+            education_items_container.addView(view)
+        }
     }
 
     override fun hideEducation() {
-        // TODO:
+        education_card.isVisible = false
+        education_items_container.removeAllViews()
     }
 
     companion object {
