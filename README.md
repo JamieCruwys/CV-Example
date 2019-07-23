@@ -15,4 +15,3 @@ Features:
 Future improvements:
 - Show a list of companies and show the start/end date in the UI
 - Show a list of technologies/libraries the candidate can work with
-- Test adapter logic
