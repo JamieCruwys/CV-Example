@@ -2,6 +2,7 @@ package uk.co.jamiecruwys.cv.di
 
 import dagger.Component
 import uk.co.jamiecruwys.cv.App
+import uk.co.jamiecruwys.cv.api.ProfileRequest
 import uk.co.jamiecruwys.cv.ui.tabs.experience.ProjectsAdapter
 import uk.co.jamiecruwys.cv.ui.tabs.experience.ProjectFragment
 import uk.co.jamiecruwys.cv.ui.tabs.experience.ProjectPresenter
@@ -30,4 +31,6 @@ interface AppComponent {
     fun inject(experiencePresenter: ProjectPresenter)
 
     fun inject(experienceAdapter: ProjectsAdapter)
+
+    fun inject(profileRequest: ProfileRequest)
 }

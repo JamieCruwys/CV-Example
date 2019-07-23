@@ -17,7 +17,4 @@ class ProjectPresenter(private val view: ProjectView) {
         val projects = cvRepository.get()?.projects
         view.showProjects(projects)
     }
-
-    fun onDestroy() {
-    }
 }

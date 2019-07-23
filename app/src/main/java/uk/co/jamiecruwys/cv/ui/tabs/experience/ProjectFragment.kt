@@ -56,11 +56,6 @@ class ProjectFragment : Fragment(), ProjectView {
         adapter.clearItems()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDestroy()
-    }
-
     companion object {
         @JvmStatic
         fun newInstance(): ProjectFragment = ProjectFragment()

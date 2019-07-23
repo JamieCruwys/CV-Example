@@ -7,10 +7,12 @@ import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_main.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), MainView {
 
-    private lateinit var presenter: MainPresenter
+    @Inject
+    lateinit var presenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,17 +22,12 @@ class MainActivity : AppCompatActivity(), MainView {
         view_pager.adapter = ViewPagerAdapter(this, supportFragmentManager)
         tabs.setupWithViewPager(view_pager)
 
-        presenter = MainPresenter(this)
+        presenter.attach(this)
     }
 
     override fun onResume() {
         super.onResume()
         presenter.onResume()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDestroy()
     }
 
     override fun showLoading() {

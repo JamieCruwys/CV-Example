@@ -53,7 +53,4 @@ class SummaryPresenter(private val view: SummaryView) {
             }
         }
     }
-
-    fun onDestroy() {
-    }
 }

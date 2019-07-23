@@ -111,11 +111,6 @@ class SummaryFragment : Fragment(), SummaryView {
         // TODO:
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDestroy()
-    }
-
     companion object {
         @JvmStatic
         fun newInstance(): SummaryFragment = SummaryFragment()
