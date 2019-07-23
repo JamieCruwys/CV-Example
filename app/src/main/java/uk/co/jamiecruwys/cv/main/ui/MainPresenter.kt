@@ -6,7 +6,7 @@ import retrofit2.Response
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.api.ApiService
 import uk.co.jamiecruwys.cv.model.Profile
-import uk.co.jamiecruwys.cv.main.ProfileRepository
+import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
 class MainPresenter(val view: MainView?) {

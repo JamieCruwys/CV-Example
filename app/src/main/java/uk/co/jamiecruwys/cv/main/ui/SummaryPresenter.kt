@@ -1,7 +1,7 @@
 package uk.co.jamiecruwys.cv.main.ui
 
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.main.ProfileRepository
+import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
 class SummaryPresenter(private val view: SummaryView) {

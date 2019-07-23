@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main
+package uk.co.jamiecruwys.cv.repository
 
 import uk.co.jamiecruwys.cv.model.Profile
 

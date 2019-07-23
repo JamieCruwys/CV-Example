@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.item_project.view.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.model.Experience
 import uk.co.jamiecruwys.cv.model.Project
-import uk.co.jamiecruwys.cv.main.ProfileRepository
+import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 import android.view.LayoutInflater
 import android.content.Intent
