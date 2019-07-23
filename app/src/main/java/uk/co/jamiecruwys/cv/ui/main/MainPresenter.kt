@@ -1,12 +1,12 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.main
 
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.api.ApiService
-import uk.co.jamiecruwys.cv.api.Profile
-import uk.co.jamiecruwys.cv.main.CVRepository
+import uk.co.jamiecruwys.cv.model.Profile
+import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
 class MainPresenter(val view: MainView?) {
@@ -15,7 +15,7 @@ class MainPresenter(val view: MainView?) {
     lateinit var apiService: ApiService
 
     @Inject
-    lateinit var cvRepository: CVRepository
+    lateinit var cvRepository: ProfileRepository
 
     init {
         App.appComponent.inject(this)

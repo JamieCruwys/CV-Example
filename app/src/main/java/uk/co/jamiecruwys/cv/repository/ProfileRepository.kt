@@ -1,8 +1,8 @@
-package uk.co.jamiecruwys.cv.main
+package uk.co.jamiecruwys.cv.repository
 
-import uk.co.jamiecruwys.cv.api.Profile
+import uk.co.jamiecruwys.cv.model.Profile
 
-class CVRepository {
+class ProfileRepository {
     private var profile: Profile? = null
 
     fun save(profile: Profile) {

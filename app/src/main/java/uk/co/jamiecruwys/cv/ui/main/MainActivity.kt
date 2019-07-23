@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), MainView {
         setContentView(R.layout.activity_main)
         App.appComponent.inject(this)
 
-        view_pager.adapter = SectionsPagerAdapter(this, supportFragmentManager)
+        view_pager.adapter = ViewPagerAdapter(this, supportFragmentManager)
         tabs.setupWithViewPager(view_pager)
 
         presenter = MainPresenter(this)

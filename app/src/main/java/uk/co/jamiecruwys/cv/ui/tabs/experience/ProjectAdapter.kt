@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.experience
 
 import android.view.View
 import android.view.ViewGroup
@@ -6,9 +6,9 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_project.view.*
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.api.Experience
-import uk.co.jamiecruwys.cv.api.Project
-import uk.co.jamiecruwys.cv.main.CVRepository
+import uk.co.jamiecruwys.cv.model.Experience
+import uk.co.jamiecruwys.cv.model.Project
+import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 import android.view.LayoutInflater
 import android.content.Intent
@@ -18,7 +18,7 @@ import uk.co.jamiecruwys.cv.R
 class ProjectsAdapter : RecyclerView.Adapter<ProjectViewHolder>() {
 
     @Inject
-    lateinit var cvRepository: CVRepository
+    lateinit var cvRepository: ProfileRepository
 
     private val projects: ArrayList<Project> = ArrayList()
 
@@ -76,10 +76,6 @@ class ProjectViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.description.isVisible = validDescription
         itemView.description.text = if (validDescription) project.description else ""
 
-        setExperience(experience)
-    }
-
-    fun setExperience(experience: Experience?) {
         val validExperience = !experience?.name.isNullOrEmpty()
         itemView.experience.isVisible = validExperience
         itemView.experience.text = if (validExperience) experience?.name else ""

@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.experience
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_experience.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
-import uk.co.jamiecruwys.cv.api.Project
+import uk.co.jamiecruwys.cv.model.Project
 
 class ProjectFragment : Fragment(), ProjectView {
 
@@ -63,7 +63,6 @@ class ProjectFragment : Fragment(), ProjectView {
 
     companion object {
         @JvmStatic
-        fun newInstance(): ProjectFragment =
-            ProjectFragment()
+        fun newInstance(): ProjectFragment = ProjectFragment()
     }
 }

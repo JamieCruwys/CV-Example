@@ -1,13 +1,13 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.summary
 
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.main.CVRepository
+import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
 class SummaryPresenter(private val view: SummaryView) {
 
     @Inject
-    lateinit var cvRepository: CVRepository
+    lateinit var cvRepository: ProfileRepository
 
     init {
         App.appComponent.inject(this)

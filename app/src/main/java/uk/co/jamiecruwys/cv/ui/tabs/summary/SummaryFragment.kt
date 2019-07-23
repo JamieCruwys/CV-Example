@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.summary
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_summary.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
-import uk.co.jamiecruwys.cv.api.Course
+import uk.co.jamiecruwys.cv.model.Course
 
 class SummaryFragment : Fragment(), SummaryView {
 
@@ -119,7 +118,6 @@ class SummaryFragment : Fragment(), SummaryView {
 
     companion object {
         @JvmStatic
-        fun newInstance(): SummaryFragment =
-            SummaryFragment()
+        fun newInstance(): SummaryFragment = SummaryFragment()
     }
 }
