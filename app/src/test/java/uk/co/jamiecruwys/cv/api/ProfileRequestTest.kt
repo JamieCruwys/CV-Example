@@ -1,9 +1,5 @@
 package uk.co.jamiecruwys.cv.api
 
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.verify
-import okhttp3.MediaType
-import okhttp3.ResponseBody
 import org.junit.Before
 import org.junit.Test
 import retrofit2.Response

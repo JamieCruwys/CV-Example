@@ -1,7 +1,6 @@
 package uk.co.jamiecruwys.cv.ui.main
 
 import com.nhaarman.mockitokotlin2.any
-import com.nhaarman.mockitokotlin2.capture
 import com.nhaarman.mockitokotlin2.doAnswer
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.never
@@ -10,7 +9,6 @@ import com.nhaarman.mockitokotlin2.whenever
 import uk.co.jamiecruwys.cv.api.ProfileRequest
 import uk.co.jamiecruwys.cv.model.Profile
 import uk.co.jamiecruwys.cv.repository.ProfileRepository
-import org.mockito.ArgumentCaptor
 import uk.co.jamiecruwys.cv.api.APIResponseListener
 
 class MainPresenterTester {

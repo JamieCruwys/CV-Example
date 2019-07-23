@@ -6,8 +6,10 @@ import uk.co.jamiecruwys.cv.model.Profile
 import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
-class MainPresenter @Inject constructor(val request: ProfileRequest,
-                                        val repository: ProfileRepository) {
+class MainPresenter @Inject constructor(
+    val request: ProfileRequest,
+    val repository: ProfileRepository
+) {
 
     private lateinit var view: MainView
 
@@ -18,7 +20,7 @@ class MainPresenter @Inject constructor(val request: ProfileRequest,
     fun onResume() {
         view.hideContent()
         view.showLoading()
-        request.requestProfile(object: APIResponseListener {
+        request.requestProfile(object : APIResponseListener {
             override fun onSuccess(profile: Profile) {
                 view.hideLoading()
                 repository.save(profile)

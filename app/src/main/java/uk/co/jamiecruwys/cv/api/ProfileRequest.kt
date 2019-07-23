@@ -3,7 +3,6 @@ package uk.co.jamiecruwys.cv.api
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.model.Profile
 import javax.inject.Inject
 
