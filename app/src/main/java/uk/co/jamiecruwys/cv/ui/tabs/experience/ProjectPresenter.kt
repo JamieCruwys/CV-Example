@@ -3,7 +3,7 @@ package uk.co.jamiecruwys.cv.ui.tabs.experience
 import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
-class ProjectPresenter @Inject constructor(var profileRepository: ProfileRepository) {
+class ProjectPresenter @Inject constructor(private var profileRepository: ProfileRepository) {
 
     private lateinit var view: ProjectView
 

@@ -6,7 +6,7 @@ import retrofit2.Response
 import uk.co.jamiecruwys.cv.model.Profile
 import javax.inject.Inject
 
-class ProfileRequest @Inject constructor(val apiService: ApiService) {
+class ProfileRequest @Inject constructor(private val apiService: ApiService) {
 
     fun requestProfile(listener: APIResponseListener) {
         apiService.getProfileJson().enqueue(object : Callback<Profile> {

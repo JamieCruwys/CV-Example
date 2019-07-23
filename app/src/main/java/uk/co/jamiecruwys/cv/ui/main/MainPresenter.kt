@@ -7,8 +7,8 @@ import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
 class MainPresenter @Inject constructor(
-    val request: ProfileRequest,
-    val repository: ProfileRepository
+    private val request: ProfileRequest,
+    private val repository: ProfileRepository
 ) {
 
     private lateinit var view: MainView

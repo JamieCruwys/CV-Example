@@ -3,7 +3,7 @@ package uk.co.jamiecruwys.cv.ui.tabs.summary
 import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
-class SummaryPresenter @Inject constructor(val profileRepository: ProfileRepository) {
+class SummaryPresenter @Inject constructor(private val profileRepository: ProfileRepository) {
 
     private lateinit var view: SummaryView
 
