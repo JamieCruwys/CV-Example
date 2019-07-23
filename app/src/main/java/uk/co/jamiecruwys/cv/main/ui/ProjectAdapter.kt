@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.item_project.view.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.api.Experience
 import uk.co.jamiecruwys.cv.api.Project
-import uk.co.jamiecruwys.cv.main.CVRepository
+import uk.co.jamiecruwys.cv.main.ProfileRepository
 import javax.inject.Inject
 import android.view.LayoutInflater
 import android.content.Intent
@@ -18,7 +18,7 @@ import uk.co.jamiecruwys.cv.R
 class ProjectsAdapter : RecyclerView.Adapter<ProjectViewHolder>() {
 
     @Inject
-    lateinit var cvRepository: CVRepository
+    lateinit var cvRepository: ProfileRepository
 
     private val projects: ArrayList<Project> = ArrayList()
 
