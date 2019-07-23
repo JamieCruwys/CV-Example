@@ -1,16 +1,16 @@
 package uk.co.jamiecruwys.cv.model
 
 data class Profile(
-    val name: String?,
-    val position: String?,
-    val phone: String?,
-    val email: String?,
-    val summary: String?,
-    val community: String?,
-    val education: List<Course?>?,
-    val awards: List<Award?>?,
-    val experiences: List<Experience?>?,
-    val projects: List<Project?>?
+    val name: String? = null,
+    val position: String? = null,
+    val phone: String? = null,
+    val email: String? = null,
+    val summary: String? = null,
+    val community: String? = null,
+    val education: List<Course?>? = null,
+    val awards: List<Award?>? = null,
+    val experiences: List<Experience?>? = null,
+    val projects: List<Project?>? = null
 ) {
     override fun toString(): String = "Profile: $name\n" +
             "Position: $position\n" +

@@ -1,20 +1,18 @@
 package uk.co.jamiecruwys.cv.ui.tabs.experience
 
-import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
-class ProjectPresenter(private val view: ProjectView) {
+class ProjectPresenter @Inject constructor(var profileRepository: ProfileRepository) {
 
-    @Inject
-    lateinit var cvRepository: ProfileRepository
+    private lateinit var view: ProjectView
 
-    init {
-        App.appComponent.inject(this)
+    fun attach(view: ProjectView) {
+        this.view = view
     }
 
     fun onResume() {
-        val projects = cvRepository.get()?.projects
+        val projects = profileRepository.get()?.projects?.filterNotNull() ?: listOf()
         view.showProjects(projects)
     }
 }
