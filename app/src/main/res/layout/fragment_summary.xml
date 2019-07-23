@@ -170,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/measurement_medium"
-                android:layout_marginBottom="@dimen/measurement_medium">
+                android:layout_marginBottom="@dimen/measurement_small">
 
             <LinearLayout
                     android:layout_width="match_parent"
