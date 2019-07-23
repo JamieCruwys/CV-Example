@@ -2,8 +2,9 @@ package uk.co.jamiecruwys.cv.di
 
 import dagger.Component
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.main.ui.ExperienceFragment
-import uk.co.jamiecruwys.cv.main.ui.ExperiencePresenter
+import uk.co.jamiecruwys.cv.main.ui.ProjectsAdapter
+import uk.co.jamiecruwys.cv.main.ui.ProjectFragment
+import uk.co.jamiecruwys.cv.main.ui.ProjectPresenter
 import uk.co.jamiecruwys.cv.main.ui.MainActivity
 import uk.co.jamiecruwys.cv.main.ui.MainPresenter
 import uk.co.jamiecruwys.cv.main.ui.SummaryFragment
@@ -24,7 +25,9 @@ interface AppComponent {
 
     fun inject(summaryPresenter: SummaryPresenter)
 
-    fun inject(experienceFragment: ExperienceFragment)
+    fun inject(experienceFragment: ProjectFragment)
 
-    fun inject(experiencePresenter: ExperiencePresenter)
+    fun inject(experiencePresenter: ProjectPresenter)
+
+    fun inject(experienceAdapter: ProjectsAdapter)
 }

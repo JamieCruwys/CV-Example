@@ -5,18 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.fragment_experience.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
-import uk.co.jamiecruwys.cv.api.Experience
+import uk.co.jamiecruwys.cv.api.Project
 
-class ExperienceFragment : Fragment(), ExperienceView {
+class ProjectFragment : Fragment(), ProjectView {
 
-    private lateinit var presenter: ExperiencePresenter
+    private lateinit var presenter: ProjectPresenter
+    private val adapter: ProjectsAdapter = ProjectsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         App.appComponent.inject(this)
-        presenter = ExperiencePresenter(this)
+        presenter = ProjectPresenter(this)
     }
 
     override fun onCreateView(
@@ -25,6 +28,12 @@ class ExperienceFragment : Fragment(), ExperienceView {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_experience, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        projects.layoutManager = LinearLayoutManager(context)
+        projects.adapter = adapter
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
@@ -39,12 +48,12 @@ class ExperienceFragment : Fragment(), ExperienceView {
         presenter.onResume()
     }
 
-    override fun showExperience(experience: List<Experience>) {
-        // TODO:
+    override fun showProjects(projects: List<Project?>?) {
+        adapter.setItems(projects)
     }
 
-    override fun hideExperience() {
-        // TODO:
+    override fun hideProjects() {
+        adapter.clearItems()
     }
 
     override fun onDestroy() {
@@ -54,7 +63,7 @@ class ExperienceFragment : Fragment(), ExperienceView {
 
     companion object {
         @JvmStatic
-        fun newInstance(): ExperienceFragment =
-            ExperienceFragment()
+        fun newInstance(): ProjectFragment =
+            ProjectFragment()
     }
 }
