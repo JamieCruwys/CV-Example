@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.main
 
 import retrofit2.Call
 import retrofit2.Callback

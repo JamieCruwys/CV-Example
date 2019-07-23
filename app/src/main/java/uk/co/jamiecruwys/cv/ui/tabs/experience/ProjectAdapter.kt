@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.experience
 
 import android.view.View
 import android.view.ViewGroup
@@ -76,10 +76,6 @@ class ProjectViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.description.isVisible = validDescription
         itemView.description.text = if (validDescription) project.description else ""
 
-        setExperience(experience)
-    }
-
-    fun setExperience(experience: Experience?) {
         val validExperience = !experience?.name.isNullOrEmpty()
         itemView.experience.isVisible = validExperience
         itemView.experience.text = if (validExperience) experience?.name else ""

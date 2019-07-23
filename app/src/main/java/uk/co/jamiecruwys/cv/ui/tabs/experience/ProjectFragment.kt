@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.experience
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -63,7 +63,6 @@ class ProjectFragment : Fragment(), ProjectView {
 
     companion object {
         @JvmStatic
-        fun newInstance(): ProjectFragment =
-            ProjectFragment()
+        fun newInstance(): ProjectFragment = ProjectFragment()
     }
 }

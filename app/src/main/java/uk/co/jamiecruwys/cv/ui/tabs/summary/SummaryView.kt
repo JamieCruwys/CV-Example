@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.summary
 
 import uk.co.jamiecruwys.cv.model.Course
 

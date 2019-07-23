@@ -2,13 +2,13 @@ package uk.co.jamiecruwys.cv.di
 
 import dagger.Component
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.main.ui.ProjectsAdapter
-import uk.co.jamiecruwys.cv.main.ui.ProjectFragment
-import uk.co.jamiecruwys.cv.main.ui.ProjectPresenter
-import uk.co.jamiecruwys.cv.main.ui.MainActivity
-import uk.co.jamiecruwys.cv.main.ui.MainPresenter
-import uk.co.jamiecruwys.cv.main.ui.SummaryFragment
-import uk.co.jamiecruwys.cv.main.ui.SummaryPresenter
+import uk.co.jamiecruwys.cv.ui.tabs.experience.ProjectsAdapter
+import uk.co.jamiecruwys.cv.ui.tabs.experience.ProjectFragment
+import uk.co.jamiecruwys.cv.ui.tabs.experience.ProjectPresenter
+import uk.co.jamiecruwys.cv.ui.main.MainActivity
+import uk.co.jamiecruwys.cv.ui.main.MainPresenter
+import uk.co.jamiecruwys.cv.ui.tabs.summary.SummaryFragment
+import uk.co.jamiecruwys.cv.ui.tabs.summary.SummaryPresenter
 import javax.inject.Singleton
 
 @Singleton

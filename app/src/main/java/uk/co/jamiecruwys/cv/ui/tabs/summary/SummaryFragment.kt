@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.main.ui
+package uk.co.jamiecruwys.cv.ui.tabs.summary
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -118,7 +118,6 @@ class SummaryFragment : Fragment(), SummaryView {
 
     companion object {
         @JvmStatic
-        fun newInstance(): SummaryFragment =
-            SummaryFragment()
+        fun newInstance(): SummaryFragment = SummaryFragment()
     }
 }
