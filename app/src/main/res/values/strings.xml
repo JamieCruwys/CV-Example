@@ -8,5 +8,5 @@
     <string name="community_title">Community</string>
     <string name="tab_summary">Summary</string>
     <string name="tab_experience">Experience</string>
-    <string name="link_image">Link Image</string>
+    <string name="link_image_content_description">Link Image</string>
 </resources>

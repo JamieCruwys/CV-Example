@@ -1,4 +1,17 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- Measurements for padding & margins -->
+    <dimen name="measurement_xsmall">4dp</dimen>
+    <dimen name="measurement_small">8dp</dimen>
+    <dimen name="measurement_medium">16dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_small">18sp</dimen>
+    <dimen name="text_medium">24sp</dimen>
+    <dimen name="text_large">32sp</dimen>
+
+    <!-- Specific sizes -->
     <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="image_link_size">60dp</dimen>
+
 </resources>
