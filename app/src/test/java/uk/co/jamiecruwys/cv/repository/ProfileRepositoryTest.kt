@@ -1,6 +1,5 @@
 package uk.co.jamiecruwys.cv.repository
 
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import uk.co.jamiecruwys.cv.model.Award
@@ -11,11 +10,11 @@ import uk.co.jamiecruwys.cv.model.Project
 
 class ProfileRepositoryTest {
 
-    private lateinit var repository: ProfileRepository
+    private lateinit var tester: ProfileRepositoryTester
 
     @Before
     fun setUp() {
-        repository = ProfileRepository()
+        tester = ProfileRepositoryTester()
     }
 
     @Test
@@ -23,10 +22,9 @@ class ProfileRepositoryTest {
         // Given
 
         // When
-        val profile = repository.get()
 
         // Then
-        Assert.assertEquals(null, profile)
+        tester.verifyEmptyRepository()
     }
 
     @Test
@@ -34,22 +32,22 @@ class ProfileRepositoryTest {
         // Given
 
         // When
-        repository.save(dummyProfile)
+        tester.saveProfile(dummyProfile)
 
         // Then
-        Assert.assertEquals(dummyProfile, repository.get())
+        tester.verifyProfileInRepository(dummyProfile)
     }
 
     @Test
     fun `given already has saved profile, when saving profile, then profile overridden`() {
         // Given
-        repository.save(dummyProfile.copy(name = "John Doe", email = "test@test.com"))
+        tester.saveProfile(dummyProfile.copy(name = "John Doe", email = "test@test.com"))
 
         // When
-        repository.save(dummyProfile)
+        tester.saveProfile(dummyProfile)
 
         // Then
-        Assert.assertEquals(dummyProfile, repository.get())
+        tester.verifyProfileInRepository(dummyProfile)
     }
 
     companion object {

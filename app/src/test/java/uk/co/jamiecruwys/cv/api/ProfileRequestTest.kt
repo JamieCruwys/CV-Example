@@ -15,25 +15,23 @@ import uk.co.jamiecruwys.cv.model.Project
 
 class ProfileRequestTest {
 
-    private val apiService: ApiService = mock()
-    private val listener: APIResponseListener = mock()
-    private lateinit var profileRequest: ProfileRequest
+    private lateinit var tester: ProfileRequestTester
 
     @Before
     fun setUp() {
-        profileRequest = ProfileRequest(apiService)
+        tester = ProfileRequestTester()
     }
 
     @Test
     fun `given valid profile, when handling response from api, then show content`() {
         // Given
-        val response: Response<Profile>? = Response.success(dummyProfile)
+        val response: Response<Profile>? = tester.getSuccessfulResponse(dummyProfile)
 
         // When
-        profileRequest.handleResponse(response, listener)
+        tester.handleResponse(response)
 
         // Then
-        verify(listener).onSuccess(dummyProfile)
+        tester.verifySuccess(dummyProfile)
     }
 
     @Test
@@ -42,34 +40,34 @@ class ProfileRequestTest {
         val response: Response<Profile>? = null
 
         // When
-        profileRequest.handleResponse(response, listener)
+        tester.handleResponse(response)
 
         // Then
-        verify(listener).onFailure()
+        tester.verifyFailure()
     }
 
     @Test
     fun `given null profile, when handling response from api, then show error`() {
         // Given
-        val response: Response<Profile>? = Response.success(null)
+        val response: Response<Profile>? = tester.getSuccessfulResponse(null)
 
         // When
-        profileRequest.handleResponse(response, listener)
+        tester.handleResponse(response)
 
         // Then
-        verify(listener).onFailure()
+        tester.verifyFailure()
     }
 
     @Test
     fun `given server error, when handling response from api, then show error`() {
         // Given
-        val response: Response<Profile>? = Response.error(404, ResponseBody.create(MediaType.get("application/json"), ""))
+        val response: Response<Profile>? = tester.getErrorResponse()
 
         // When
-        profileRequest.handleResponse(response, listener)
+        tester.handleResponse(response)
 
         // Then
-        verify(listener).onFailure()
+        tester.verifyFailure()
     }
 
     companion object {
