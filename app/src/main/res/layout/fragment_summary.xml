@@ -20,7 +20,7 @@
                 android:id="@+id/header_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/text_large"
+                android:textSize="@dimen/text_xlarge"
                 android:textStyle="bold"
                 android:layout_marginStart="@dimen/measurement_small"
                 android:layout_marginTop="@dimen/measurement_small"
@@ -50,7 +50,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/text_medium"
+                        android:textSize="@dimen/text_large"
                         android:text="@string/contact_details_title"/>
 
                 <LinearLayout
@@ -120,7 +120,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/text_medium"
+                        android:textSize="@dimen/text_large"
                         android:text="@string/summary_title"/>
 
                 <TextView
@@ -150,7 +150,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/text_medium"
+                        android:textSize="@dimen/text_large"
                         android:text="@string/community_title"/>
 
                 <TextView
@@ -181,7 +181,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/text_medium"
+                        android:textSize="@dimen/text_large"
                         android:text="@string/education_title"/>
 
                 <LinearLayout
