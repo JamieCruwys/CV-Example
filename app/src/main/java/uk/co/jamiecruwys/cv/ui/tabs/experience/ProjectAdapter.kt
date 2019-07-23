@@ -26,9 +26,9 @@ class ProjectsAdapter : RecyclerView.Adapter<ProjectViewHolder>() {
         App.appComponent.inject(this)
     }
 
-    fun setItems(newProjects: List<Project?>?) {
+    fun setItems(newProjects: List<Project>) {
         clearItems()
-        projects.addAll(newProjects?.filterNotNull() ?: listOf())
+        projects.addAll(newProjects)
         notifyDataSetChanged()
     }
 

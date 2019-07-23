@@ -10,16 +10,19 @@ import kotlinx.android.synthetic.main.fragment_experience.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
 import uk.co.jamiecruwys.cv.model.Project
+import javax.inject.Inject
 
 class ProjectFragment : Fragment(), ProjectView {
 
-    private lateinit var presenter: ProjectPresenter
+    @Inject
+    lateinit var presenter: ProjectPresenter
+
     private val adapter: ProjectsAdapter = ProjectsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         App.appComponent.inject(this)
-        presenter = ProjectPresenter(this)
+        presenter.attach(this)
     }
 
     override fun onCreateView(
@@ -48,17 +51,12 @@ class ProjectFragment : Fragment(), ProjectView {
         presenter.onResume()
     }
 
-    override fun showProjects(projects: List<Project?>?) {
+    override fun showProjects(projects: List<Project>) {
         adapter.setItems(projects)
     }
 
     override fun hideProjects() {
         adapter.clearItems()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDestroy()
     }
 
     companion object {
