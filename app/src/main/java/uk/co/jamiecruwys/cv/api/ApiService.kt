@@ -6,6 +6,6 @@ import uk.co.jamiecruwys.cv.model.Profile
 
 interface ApiService {
 
-    @GET("09de5456de8901497704c26d6c815498/raw/7350b955c2d05beb2d1051522d31a761d9acc3fe/profile.json")
+    @GET("09de5456de8901497704c26d6c815498/raw/85e578cf785a8f06321991574fd6c37979c13ae3/profile.json")
     fun getProfileJson(): Call<Profile>
 }

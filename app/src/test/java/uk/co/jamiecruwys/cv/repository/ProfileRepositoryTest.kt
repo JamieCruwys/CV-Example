@@ -58,7 +58,7 @@ class ProfileRepositoryTest {
             "Email",
             "Summary",
             "Community",
-            listOf(Course("Grade", "Location", "Name")),
+            listOf(Course("Name", "Grade", "Location")),
             listOf(Award("Name")),
             listOf(Experience(1, "Name", "Position", "01/01/2001", "02/02/2002")),
             listOf(Project("Name", "Subtitle", "Link", "Description", 1))

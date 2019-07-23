@@ -8,7 +8,8 @@
     <!-- Text sizes -->
     <dimen name="text_small">18sp</dimen>
     <dimen name="text_medium">24sp</dimen>
-    <dimen name="text_large">32sp</dimen>
+    <dimen name="text_large">28sp</dimen>
+    <dimen name="text_xlarge">32sp</dimen>
 
     <!-- Specific sizes -->
     <dimen name="appbar_padding">16dp</dimen>

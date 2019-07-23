@@ -210,7 +210,7 @@ class SummaryPresenterTest {
     @Test
     fun `given profile with education, when app resumes, education shown`() {
         // Given
-        val education = listOf(Course("1st", "University X", "John Smith"))
+        val education = listOf(Course("Computer Science", "1st Class Honours", "Harvard University"))
         tester.setProfile(Profile(education = education))
 
         // When
@@ -276,7 +276,7 @@ class SummaryPresenterTest {
         private const val email = "Email"
         private const val summary = "Summary"
         private const val community = "Community"
-        private val education = listOf(Course("Grade", "Location", "Name"))
+        private val education = listOf(Course("Name", "Grade", "Location"))
         private val awards = listOf(Award("Name"))
         private val experiences = listOf(Experience(1, "Name", "Position", "01/01/2001", "02/02/2002"))
         private val projects = listOf(Project("Name", "Subtitle", "Link", "Description", 1))
