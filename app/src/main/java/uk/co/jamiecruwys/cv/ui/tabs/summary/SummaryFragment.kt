@@ -10,15 +10,17 @@ import kotlinx.android.synthetic.main.fragment_summary.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
 import uk.co.jamiecruwys.cv.model.Course
+import javax.inject.Inject
 
 class SummaryFragment : Fragment(), SummaryView {
 
-    private lateinit var presenter: SummaryPresenter
+    @Inject
+    lateinit var presenter: SummaryPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         App.appComponent.inject(this)
-        presenter = SummaryPresenter(this)
+        presenter.attach(this)
     }
 
     override fun onCreateView(
@@ -109,11 +111,6 @@ class SummaryFragment : Fragment(), SummaryView {
 
     override fun hideEducation() {
         // TODO:
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDestroy()
     }
 
     companion object {

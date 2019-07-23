@@ -1,46 +1,36 @@
 package uk.co.jamiecruwys.cv.ui.main
 
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.api.ApiService
+import uk.co.jamiecruwys.cv.api.APIResponseListener
+import uk.co.jamiecruwys.cv.api.ProfileRequest
 import uk.co.jamiecruwys.cv.model.Profile
 import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
-class MainPresenter(val view: MainView?) {
+class MainPresenter @Inject constructor(
+    private val request: ProfileRequest,
+    private val repository: ProfileRepository
+) {
 
-    @Inject
-    lateinit var apiService: ApiService
+    private lateinit var view: MainView
 
-    @Inject
-    lateinit var cvRepository: ProfileRepository
-
-    init {
-        App.appComponent.inject(this)
+    fun attach(view: MainView) {
+        this.view = view
     }
 
     fun onResume() {
-        view?.hideContent()
-        view?.showLoading()
-
-        apiService.getProfileJson().enqueue(object : Callback<Profile> {
-            override fun onResponse(call: Call<Profile>, response: Response<Profile>) {
-                view?.hideLoading()
-                response.body()?.let { dto ->
-                    cvRepository.save(dto)
-                    view?.showContent()
-                } ?: view?.showError()
+        view.hideContent()
+        view.showLoading()
+        request.requestProfile(object : APIResponseListener {
+            override fun onSuccess(profile: Profile) {
+                view.hideLoading()
+                repository.save(profile)
+                view.showContent()
             }
 
-            override fun onFailure(call: Call<Profile>, t: Throwable) {
-                view?.hideLoading()
-                view?.showError()
+            override fun onFailure() {
+                view.hideLoading()
+                view.showError()
             }
         })
-    }
-
-    fun onDestroy() {
     }
 }

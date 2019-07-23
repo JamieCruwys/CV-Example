@@ -1,59 +1,54 @@
 package uk.co.jamiecruwys.cv.ui.tabs.summary
 
-import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.repository.ProfileRepository
 import javax.inject.Inject
 
-class SummaryPresenter(private val view: SummaryView) {
+class SummaryPresenter @Inject constructor(private val profileRepository: ProfileRepository) {
 
-    @Inject
-    lateinit var cvRepository: ProfileRepository
+    private lateinit var view: SummaryView
 
-    init {
-        App.appComponent.inject(this)
+    fun attach(view: SummaryView) {
+        this.view = view
     }
 
     fun onResume() {
-        cvRepository.get()?.let { profile ->
+        val profile = profileRepository.get()
 
-            profile.name?.let { name ->
-                view.showName(name)
-            } ?: view.hideName()
+        profile?.name?.let { name ->
+            view.showName(name)
+        } ?: view.hideName()
 
-            profile.position?.let { position ->
-                view.showPosition(position)
-            } ?: view.hidePosition()
+        profile?.position?.let { position ->
+            view.showPosition(position)
+        } ?: view.hidePosition()
 
-            view.hideContactInfoContainer()
+        view.hideContactInfoContainer()
 
-            profile.phone?.let { phone ->
-                view.showContactInfoContainer()
-                view.showPhone(phone)
+        profile?.phone?.let { phone ->
+            view.showContactInfoContainer()
+            view.showPhone(phone)
+        } ?: view.hidePhone()
+
+        profile?.email?.let { email ->
+            view.showContactInfoContainer()
+            view.showEmail(email)
+        } ?: view.hideEmail()
+
+        profile?.summary?.let { summary ->
+            view.showSummary(summary)
+        } ?: view.hideSummary()
+
+        profile?.community?.let { community ->
+            view.showCommunity(community)
+        } ?: view.hideCommunity()
+
+        profile?.education?.let {
+            val education = it.filterNotNull()
+            if (education.isEmpty()) {
+                view.hideEducation()
+            } else {
+                view.showEducation(education)
             }
-
-            profile.email?.let { email ->
-                view.showContactInfoContainer()
-                view.showEmail(email)
-            }
-
-            profile.summary?.let { summary ->
-                view.showSummary(summary)
-            } ?: view.hideSummary()
-
-            profile.community?.let { community ->
-                view.showCommunity(community)
-            } ?: view.hideCommunity()
-
-            profile.education?.filterNotNull().let { education ->
-                if (education.isNullOrEmpty()) {
-                    view.hideEducation()
-                } else {
-                    view.showEducation(education)
-                }
-            }
-        }
-    }
-
-    fun onDestroy() {
+        } ?: view.hideEducation()
     }
 }
