@@ -127,6 +127,7 @@
                         android:id="@+id/summary_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
                         android:layout_marginTop="@dimen/measurement_small"
                         tools:text="Android developer with over 5 years experience contributing to greenfield and legacy applications in many domains: ecommerce, medical, government, parking and electronic point of sale."/>
 
@@ -158,6 +159,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/measurement_small"
+                        android:textSize="@dimen/text_small"
                         tools:text="Since January 2015, I have been organising and speaking at a monthly meetup in Bournemouth called ​Mobile Dorset"/>
 
             </LinearLayout>
