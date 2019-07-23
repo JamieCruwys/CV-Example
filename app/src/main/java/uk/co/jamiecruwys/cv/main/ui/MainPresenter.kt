@@ -5,7 +5,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.api.ApiService
-import uk.co.jamiecruwys.cv.api.Profile
+import uk.co.jamiecruwys.cv.model.Profile
 import uk.co.jamiecruwys.cv.main.ProfileRepository
 import javax.inject.Inject
 

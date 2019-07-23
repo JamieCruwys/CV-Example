@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_summary.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
-import uk.co.jamiecruwys.cv.api.Course
+import uk.co.jamiecruwys.cv.model.Course
 
 class SummaryFragment : Fragment(), SummaryView {
 

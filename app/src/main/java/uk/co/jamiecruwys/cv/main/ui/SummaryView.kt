@@ -1,6 +1,6 @@
 package uk.co.jamiecruwys.cv.main.ui
 
-import uk.co.jamiecruwys.cv.api.Course
+import uk.co.jamiecruwys.cv.model.Course
 
 interface SummaryView {
 

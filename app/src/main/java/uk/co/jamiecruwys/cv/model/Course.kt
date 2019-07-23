@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cv.api
+package uk.co.jamiecruwys.cv.model
 
 data class Course(
     val grade: String?,

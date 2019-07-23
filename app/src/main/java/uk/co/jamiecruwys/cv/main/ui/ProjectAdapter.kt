@@ -6,8 +6,8 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_project.view.*
 import uk.co.jamiecruwys.cv.App
-import uk.co.jamiecruwys.cv.api.Experience
-import uk.co.jamiecruwys.cv.api.Project
+import uk.co.jamiecruwys.cv.model.Experience
+import uk.co.jamiecruwys.cv.model.Project
 import uk.co.jamiecruwys.cv.main.ProfileRepository
 import javax.inject.Inject
 import android.view.LayoutInflater

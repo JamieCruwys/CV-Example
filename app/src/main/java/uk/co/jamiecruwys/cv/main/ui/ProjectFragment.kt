@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_experience.*
 import uk.co.jamiecruwys.cv.App
 import uk.co.jamiecruwys.cv.R
-import uk.co.jamiecruwys.cv.api.Project
+import uk.co.jamiecruwys.cv.model.Project
 
 class ProjectFragment : Fragment(), ProjectView {
 

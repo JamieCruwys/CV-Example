@@ -2,6 +2,7 @@ package uk.co.jamiecruwys.cv.api
 
 import retrofit2.Call
 import retrofit2.http.GET
+import uk.co.jamiecruwys.cv.model.Profile
 
 interface ApiService {
 

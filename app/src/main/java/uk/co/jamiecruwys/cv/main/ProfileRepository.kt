@@ -1,6 +1,6 @@
 package uk.co.jamiecruwys.cv.main
 
-import uk.co.jamiecruwys.cv.api.Profile
+import uk.co.jamiecruwys.cv.model.Profile
 
 class ProfileRepository {
     private var profile: Profile? = null
