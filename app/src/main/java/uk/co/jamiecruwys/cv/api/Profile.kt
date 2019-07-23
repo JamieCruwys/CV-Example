@@ -12,7 +12,7 @@ data class Profile(
     val experiences: List<Experience?>?,
     val projects: List<Project?>?
 ) {
-    override fun toString(): String = "Name: $name\n" +
+    override fun toString(): String = "Profile: $name\n" +
             "Position: $position\n" +
             "Phone: $phone\n" +
             "Email: $email\n" +

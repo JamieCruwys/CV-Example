@@ -7,7 +7,7 @@ data class Project(
     val description: String?,
     val experienceId: Int?
 ) {
-    override fun toString(): String = "Name: $name\n" +
+    override fun toString(): String = "Project: $name\n" +
             "Subtitle: $subtitle\n" +
             "Link: $link\n" +
             "Description: $description\n" +

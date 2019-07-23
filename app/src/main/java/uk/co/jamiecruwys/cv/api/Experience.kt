@@ -8,8 +8,8 @@ data class Experience(
     val endDate: String?
 ) {
     override fun toString(): String {
-        return "Id: $id\n" +
-                "Name: $name\n" +
+        return "Experience: $name\n" +
+                "Id: $id\n" +
                 "Position: $position\n" +
                 "Start Date: $startDate\n" +
                 "End Date: $endDate\n"
