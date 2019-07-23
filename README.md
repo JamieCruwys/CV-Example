@@ -10,6 +10,8 @@ Features:
 - Code quality checks using [Spotless](https://github.com/diffplug/spotless) and Lint [baseline](https://developer.android.com/studio/write/lint#snapshot)
 - Continuous integration set up with [Bitrise](https://app.bitrise.io/app/82f677d21b524b6e#)
 
+![CV-Example app](github/cv-example.gif)
+
 Future improvements:
 - Show a list of companies and show the start/end date in the UI
 - Show a list of technologies/libraries the candidate can work with
