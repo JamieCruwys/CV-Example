@@ -7,8 +7,8 @@ Features:
 - Experience tab features: projects, links, summaries, company worked at
 - MVP architecture utilising a simple repository to store the data
 - 31 unit tests
-- Code quality checks using Spotless, Lint (baseline)
-- Continuous integration set up with Bitrise
+- Code quality checks using [Spotless](https://github.com/diffplug/spotless) and Lint [baseline](https://developer.android.com/studio/write/lint#snapshot)
+- Continuous integration set up with [Bitrise](https://app.bitrise.io/app/82f677d21b524b6e#)
 
 Future improvements:
 - Show a list of companies and show the start/end date in the UI
