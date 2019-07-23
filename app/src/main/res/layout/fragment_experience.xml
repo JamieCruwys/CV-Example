@@ -3,10 +3,10 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:paddingStart="16dp"
-              android:paddingEnd="16dp"
-              android:paddingTop="8dp"
-              android:paddingBottom="8dp">
+              android:paddingStart="@dimen/measurement_medium"
+              android:paddingEnd="@dimen/measurement_medium"
+              android:paddingTop="@dimen/measurement_small"
+              android:paddingBottom="@dimen/measurement_small">
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/projects"

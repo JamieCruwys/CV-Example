@@ -4,14 +4,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginTop="@dimen/measurement_small"
+        android:layout_marginBottom="@dimen/measurement_small">
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="@dimen/measurement_small">
 
         <RelativeLayout
                 android:layout_width="match_parent"
@@ -19,12 +19,12 @@
 
             <ImageButton
                     android:id="@+id/link"
-                    android:layout_width="60dp"
+                    android:layout_width="@dimen/image_link_size"
                     android:src="@drawable/ic_link"
-                    android:layout_height="60dp"
+                    android:layout_height="@dimen/image_link_size"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:contentDescription="@string/link_image"
+                    android:contentDescription="@string/link_image_content_description"
                     android:background="@android:color/transparent"/>
 
             <LinearLayout android:layout_width="match_parent"
@@ -36,15 +36,15 @@
                         android:id="@+id/title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/text_medium"
                         tools:text="Project Title"/>
 
                 <TextView
                         android:id="@+id/experience"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/text_small"
+                        android:layout_marginTop="@dimen/measurement_xsmall"
                         tools:text="HM Revenue &amp; Customs"/>
 
             </LinearLayout>
@@ -54,9 +54,9 @@
         <TextView
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/measurement_small"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_small"
                 tools:text="Simple gratitude journal that reminds you to be grateful each day. Built in Kotlin. Features offline storage, backup and data migration. Tested using JUnit, Mockito &amp; Espresso."/>
 
     </LinearLayout>

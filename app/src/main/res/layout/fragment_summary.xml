@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -13,66 +12,66 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp">
+            android:paddingStart="@dimen/measurement_medium"
+            android:paddingEnd="@dimen/measurement_medium"
+            android:paddingBottom="@dimen/measurement_medium">
 
         <TextView
                 android:id="@+id/header_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="32sp"
+                android:textSize="@dimen/text_large"
                 android:textStyle="bold"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/measurement_small"
+                android:layout_marginTop="@dimen/measurement_small"
                 tools:text="Jamie Cruwys"/>
 
         <TextView
                 android:id="@+id/header_position"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:textSize="@dimen/text_medium"
+                android:layout_marginStart="@dimen/measurement_small"
+                android:layout_marginTop="@dimen/measurement_small"
                 tools:text="Android Developer"/>
 
         <androidx.cardview.widget.CardView
                 android:id="@+id/contact_info_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="@dimen/measurement_medium">
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="@dimen/measurement_small">
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/text_medium"
                         android:text="@string/contact_details_title"/>
 
                 <LinearLayout
                         android:id="@+id/contact_info_phone_container"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/measurement_small"
                         android:orientation="horizontal">
 
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/text_small"
                             android:text="@string/contact_details_phone_label"/>
 
                     <TextView
                             android:id="@+id/contact_info_phone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="18sp"
-                            android:layout_marginStart="8dp"
+                            android:textSize="@dimen/text_small"
+                            android:layout_marginStart="@dimen/measurement_small"
                             android:autoLink="phone"
                             tools:text="07537489264"/>
 
@@ -82,21 +81,21 @@
                         android:id="@+id/contact_info_email_container"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/measurement_small"
                         android:orientation="horizontal">
 
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/text_small"
                             android:text="@string/contact_details_email_label"/>
 
                     <TextView
                             android:id="@+id/contact_info_email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:textSize="18sp"
+                            android:layout_marginStart="@dimen/measurement_small"
+                            android:textSize="@dimen/text_small"
                             android:autoLink="email"
                             tools:text="07537489264"/>
 
@@ -110,25 +109,25 @@
                 android:id="@+id/summary_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="@dimen/measurement_medium">
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="@dimen/measurement_small">
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/text_medium"
                         android:text="@string/summary_title"/>
 
                 <TextView
                         android:id="@+id/summary_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/measurement_small"
                         tools:text="Android developer with over 5 years experience contributing to greenfield and legacy applications in many domains: ecommerce, medical, government, parking and electronic point of sale."/>
 
             </LinearLayout>
@@ -139,26 +138,26 @@
                 android:id="@+id/community_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp">
+                android:layout_marginTop="@dimen/measurement_medium"
+                android:layout_marginBottom="@dimen/measurement_medium">
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="@dimen/measurement_small">
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/text_medium"
                         android:text="@string/community_title"/>
 
                 <TextView
                         android:id="@+id/community_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/measurement_small"
                         tools:text="Since January 2015, I have been organising and speaking at a monthly meetup in Bournemouth called ​Mobile Dorset"/>
 
             </LinearLayout>
